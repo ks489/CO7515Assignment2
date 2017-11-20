@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:collaboration id="Collaboration_1t2qekd">
+    <bpmn:participant id="Participant_1qr3stg" name="Secretary" processRef="Process_1" />
+    <bpmn:participant id="Participant_04gpi7z" name="CalendarService" processRef="Process_000nwqk" />
+    <bpmn:participant id="Participant_1jzlvo9" name="UserService" processRef="Process_0x76crw" />
+    <bpmn:participant id="Participant_19q39ke" name="CommunicationService" processRef="Process_1sscvj0" />
+    <bpmn:participant id="Participant_1uq9she" processRef="Process_0nfufpg" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_1" />
+  </bpmn:process>
+  <bpmn:process id="Process_000nwqk" />
+  <bpmn:process id="Process_0x76crw" />
+  <bpmn:process id="Process_1sscvj0" />
+  <bpmn:process id="Process_0nfufpg" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1t2qekd">
+      <bpmndi:BPMNShape id="Participant_1qr3stg_di" bpmnElement="Participant_1qr3stg">
+        <dc:Bounds x="161" y="85" width="1571" height="251" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="211" y="105" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="184" y="141" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_04gpi7z_di" bpmnElement="Participant_04gpi7z">
+        <dc:Bounds x="161" y="335" width="1572" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1jzlvo9_di" bpmnElement="Participant_1jzlvo9">
+        <dc:Bounds x="161" y="586" width="1574" height="249" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_19q39ke_di" bpmnElement="Participant_19q39ke">
+        <dc:Bounds x="161" y="835" width="1575" height="251" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1uq9she_di" bpmnElement="Participant_1uq9she">
+        <dc:Bounds x="161" y="1088" width="1576" height="268" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
