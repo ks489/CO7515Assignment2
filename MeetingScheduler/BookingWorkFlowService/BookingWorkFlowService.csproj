@@ -74,6 +74,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Test.cs" />
     <None Include="Service References\CalendarServiceReference\CalendarSvc.disco" />
     <None Include="Service References\CalendarServiceReference\configuration91.svcinfo" />
     <None Include="Service References\CalendarServiceReference\configuration.svcinfo" />
@@ -188,6 +189,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
       <SubType>Designer</SubType>
     </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MeetingScheduler.Core\MeetingScheduler.Core.csproj">
+      <Project>{59eb86c3-1386-43cc-9af7-0ed7b742572a}</Project>
+      <Name>MeetingScheduler.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

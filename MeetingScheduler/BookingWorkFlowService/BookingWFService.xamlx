@@ -1,5 +1,7 @@
 ﻿<WorkflowService mc:Ignorable="sap sap2010 sads" p1:TextExpression.Namespaces="{x:Reference __ReferenceID1}" p1:TextExpression.References="{x:Reference __ReferenceID2}" ConfigurationName="BookingWFService" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="BookingWFService"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:b="clr-namespace:BookingWorkFlowService;assembly=BookingWorkFlowService"
+ xmlns:bc="clr-namespace:BookingWorkFlowService.CalendarServiceReference;assembly=BookingWorkFlowService"
  xmlns:bu="clr-namespace:BookingWorkFlowService.UserServiceReference;assembly=BookingWorkFlowService"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
@@ -21,6 +23,9 @@
         <x:String>System.Linq</x:String>
         <x:String>System.Text</x:String>
         <x:String>BookingWorkFlowService.UserServiceReference</x:String>
+        <x:String>Microsoft.CSharp</x:String>
+        <x:String>BookingWorkFlowService.CalendarServiceReference</x:String>
+        <x:String>BookingWorkFlowService</x:String>
       </sco:Collection>
     </p1:TextExpression.Namespaces>
     <p1:TextExpression.References>
@@ -43,6 +48,7 @@
         <p1:AssemblyReference>System.Xaml</p1:AssemblyReference>
         <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
         <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
+        <p1:AssemblyReference>MeetingScheduler.Core</p1:AssemblyReference>
         <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
         <p1:AssemblyReference>BookingWorkFlowService</p1:AssemblyReference>
       </sco:Collection>
@@ -52,6 +58,10 @@
       <p1:Variable x:TypeArguments="x:Int32" Name="data" />
       <p1:Variable x:TypeArguments="bu:User[]" Name="GlobalEmployeeArray" />
       <p1:Variable x:TypeArguments="s:DateTime" Name="GlobalMeetingDate" />
+      <p1:Variable x:TypeArguments="x:Boolean" Name="GlobalAvailable" />
+      <p1:Variable x:TypeArguments="bc:User" Name="GlobalUser" />
+      <p1:Variable x:TypeArguments="x:String" Name="variable1" />
+      <p1:Variable x:TypeArguments="b:Test" Name="testinvoke" />
     </p1:Sequence.Variables>
     <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="ScheduleMeeting" ServiceContractName="p:IService">
       <Receive.CorrelationInitializers>
@@ -72,25 +82,58 @@
         </p1:OutArgument>
       </ReceiveParametersContent>
     </Receive>
+    <p1:ForEach x:TypeArguments="bu:User" DisplayName="ForEach&lt;User&gt;" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+      <p1:ForEach.Values>
+        <p1:InArgument x:TypeArguments="scg:IEnumerable(bu:User)">
+          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(bu:User)">GlobalEmployeeArray</mca:CSharpValue>
+        </p1:InArgument>
+      </p1:ForEach.Values>
+      <p1:ActivityAction x:TypeArguments="bu:User">
+        <p1:ActivityAction.Argument>
+          <p1:DelegateInArgument x:TypeArguments="bu:User" Name="item" />
+        </p1:ActivityAction.Argument>
+        <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <p1:Sequence.Variables>
+            <p1:Variable x:TypeArguments="x:String" Name="teststring" />
+          </p1:Sequence.Variables>
+          <p1:InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="  Greet" TargetType="b:Test">
+            <p1:InvokeMethod.Result>
+              <p1:OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">teststring</mca:CSharpReference>
+              </p1:OutArgument>
+            </p1:InvokeMethod.Result>
+          </p1:InvokeMethod>
+        </p1:Sequence>
+      </p1:ActivityAction>
+    </p1:ForEach>
     <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
       <SendParametersContent>
         <p1:InArgument x:TypeArguments="x:String" x:Key="parameter1">Hello</p1:InArgument>
       </SendParametersContent>
     </SendReply>
-    <sads:DebugSymbol.Symbol>d2JEOlxQcm9qZWN0c1xPdGhlclxDTzc1MTVBc3NpZ25tZW50MlxNZWV0aW5nU2NoZWR1bGVyXEJvb2tpbmdXb3JrRmxvd1NlcnZpY2VcQm9va2luZ1dGU2VydmljZS54YW1seAcPA1ERAQE4BUoPAQ5LBU8RAQJEC0RlARlHC0dkARQ9Dz1cAQ9NRk1LAQ0=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d2JEOlxQcm9qZWN0c1xPdGhlclxDTzc1MTVBc3NpZ25tZW50MlxNZWV0aW5nU2NoZWR1bGVyXEJvb2tpbmdXb3JrRmxvd1NlcnZpY2VcQm9va2luZ1dGU2VydmljZS54YW1seAwRA3MRAQFCBVQPAS1VBWwSARZtBXERAQJOC05lAUBRC1FkATdHD0dcAS5YC1hsASRfCWoXARdvRm9LARVjC2kdARhmEWZhARk=</sads:DebugSymbol.Symbol>
   </p1:Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="255,90" />
-      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="255,90" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="277,344">
+      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="287,90" />
+      <sap2010:ViewStateData Id="InvokeMethod_1" sap:VirtualizedContainerService.HintSize="218,134" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="240,258">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="307,414" />
+      <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="287,408" />
+      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="287,90" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="309,792">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="339,862" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </WorkflowService>

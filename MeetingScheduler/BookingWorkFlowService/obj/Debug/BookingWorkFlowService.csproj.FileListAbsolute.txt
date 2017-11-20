@@ -24,6 +24,8 @@ D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\BookingWorkFlowService.dll
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\BookingWorkFlowService.pdb
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\bin\MeetingScheduler.Core.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\bin\MeetingScheduler.Core.pdb
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\InProcessTempFiles\BookingWorkFlowService.CalendarServiceReference.ICalendarSvc.CheckAvailability.g.cs
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\InProcessTempFiles\BookingWorkFlowService.CalendarServiceReference.ICalendarSvc.CheckAvailability.g.xaml
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\InProcessTempFiles\BookingWorkFlowService.CalendarServiceReference.ICalendarSvc.InsertUserCalendarEvent.g.cs
@@ -33,3 +35,4 @@ D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\InProcessTempFiles\BookingWorkFlowService.UserServiceReference.IUserSvc.GetRepresentitive.g.cs
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\InProcessTempFiles\BookingWorkFlowService.UserServiceReference.IUserSvc.GetRepresentitive.g.xaml
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\InProcessTempFiles\_BookingWorkFlowService.g.cs
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\BookingWorkFlowService.csproj.FileListAbsolute.txt
