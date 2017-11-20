@@ -8,11 +8,15 @@ using System.Text;
 
 namespace CalendarService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "ICalendarSvc" in both code and config file together.
+    /// <summary>
+    /// All Calendar service related functions
+    /// </summary>
     [ServiceContract]
     public interface ICalendarSvc
     {
         [OperationContract]
-        bool CheckAvailability(DateTime dateTime, User user);
+        bool CheckAvailability(User user, DateTime dateTime);
+        [OperationContract]
+        void InsertUserCalendarEvent(User user, DateTime dateTime);
     }
 }

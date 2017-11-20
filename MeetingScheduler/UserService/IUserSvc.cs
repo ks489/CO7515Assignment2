@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeetingScheduler.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -7,11 +8,13 @@ using System.Text;
 
 namespace UserService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IUserSvc" in both code and config file together.
+    /// <summary>
+    /// All User service related functions
+    /// </summary>
     [ServiceContract]
     public interface IUserSvc
     {
         [OperationContract]
-        void DoWork();
+        User GetRepresentitive(User user);
     }
 }

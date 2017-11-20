@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeetingScheduler.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -7,11 +8,13 @@ using System.Text;
 
 namespace CommunicationService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "ICommunicationSvc" in both code and config file together.
+    /// <summary>
+    /// All Communication service related functions
+    /// </summary>
     [ServiceContract]
     public interface ICommunicationSvc
     {
         [OperationContract]
-        void DoWork();
+        void SendMessage(User user);
     }
 }

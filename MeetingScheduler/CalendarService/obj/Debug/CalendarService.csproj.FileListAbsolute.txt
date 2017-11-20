@@ -1,0 +1,8 @@
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CalendarService\obj\Debug\CalendarService.csprojResolveAssemblyReference.cache
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CalendarService\bin\CalendarService.dll.config
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CalendarService\bin\CalendarService.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CalendarService\bin\CalendarService.pdb
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CalendarService\bin\MeetingScheduler.Core.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CalendarService\bin\MeetingScheduler.Core.pdb
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CalendarService\obj\Debug\CalendarService.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CalendarService\obj\Debug\CalendarService.pdb

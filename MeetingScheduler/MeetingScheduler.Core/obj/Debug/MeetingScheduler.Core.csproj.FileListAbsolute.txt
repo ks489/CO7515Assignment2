@@ -1,0 +1,5 @@
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\MeetingScheduler.Core\bin\Debug\MeetingScheduler.Core.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\MeetingScheduler.Core\bin\Debug\MeetingScheduler.Core.pdb
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\MeetingScheduler.Core\obj\Debug\MeetingScheduler.Core.csprojResolveAssemblyReference.cache
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\MeetingScheduler.Core\obj\Debug\MeetingScheduler.Core.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\MeetingScheduler.Core\obj\Debug\MeetingScheduler.Core.pdb

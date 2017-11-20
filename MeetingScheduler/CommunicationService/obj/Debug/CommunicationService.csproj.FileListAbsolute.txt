@@ -1,0 +1,7 @@
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\bin\CommunicationService.dll.config
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\bin\CommunicationService.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\bin\CommunicationService.pdb
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\bin\MeetingScheduler.Core.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\bin\MeetingScheduler.Core.pdb
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\obj\Debug\CommunicationService.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\obj\Debug\CommunicationService.pdb

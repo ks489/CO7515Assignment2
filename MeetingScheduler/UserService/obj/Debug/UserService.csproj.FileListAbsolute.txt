@@ -1,0 +1,8 @@
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\UserService\bin\UserService.dll.config
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\UserService\bin\UserService.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\UserService\bin\UserService.pdb
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\UserService\obj\Debug\UserService.csprojResolveAssemblyReference.cache
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\UserService\obj\Debug\UserService.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\UserService\obj\Debug\UserService.pdb
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\UserService\bin\MeetingScheduler.Core.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\UserService\bin\MeetingScheduler.Core.pdb
