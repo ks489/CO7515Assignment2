@@ -60,7 +60,7 @@
         <OutArgument x:TypeArguments="bc:SendMessageResponse">
           <VariableReference x:TypeArguments="bc:SendMessageResponse">
             <VariableReference.Variable>
-              <Variable x:TypeArguments="bc:SendMessageResponse" x:Name="__ReferenceID1" Name="tempResult_9f25496219504e3b83c4b511109765de" />
+              <Variable x:TypeArguments="bc:SendMessageResponse" x:Name="__ReferenceID1" Name="tempResult_7acfd2404b5d46d781765abdb8b62dc0" />
             </VariableReference.Variable>
           </VariableReference>
         </OutArgument>

@@ -5,3 +5,4 @@ D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\bin\Me
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\bin\MeetingScheduler.Core.pdb
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\obj\Debug\CommunicationService.dll
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\obj\Debug\CommunicationService.pdb
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\CommunicationService\obj\Debug\CommunicationService.csprojResolveAssemblyReference.cache

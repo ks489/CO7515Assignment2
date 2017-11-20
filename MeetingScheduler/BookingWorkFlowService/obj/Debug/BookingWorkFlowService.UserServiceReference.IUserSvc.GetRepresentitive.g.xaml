@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<this:GetRepresentitive this:EndpointConfigurationName="BasicHttpBinding_IUserSvc" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:bu="clr-namespace:BookingWorkFlowService.UserServiceReference;assembly=BookingWorkFlowService" xmlns:bu1="clr-namespace:BookingWorkFlowService.UserServiceReference;assembly=BookingWorkFlowService, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:this="clr-namespace:BookingWorkFlowService.UserServiceReference.Activities;assembly=BookingWorkFlowService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <this:GetRepresentitive.Implementation>
+    <Sequence>
+      <Sequence.Variables>
+        <x:Reference>__ReferenceID1</x:Reference>
+        <x:Reference>__ReferenceID2</x:Reference>
+      </Sequence.Variables>
+      <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IUserSvc/GetRepresentitive" OperationName="GetRepresentitive" ServiceContractName="p:IUserSvc">
+        <p1:Send.CorrelationInitializers>
+          <p1:RequestReplyCorrelationInitializer>
+            <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+              <InArgument x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                  <VariableValue.Variable>
+                    <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                  </VariableValue.Variable>
+                </VariableValue>
+              </InArgument>
+            </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+          </p1:RequestReplyCorrelationInitializer>
+        </p1:Send.CorrelationInitializers>
+        <p1:SendMessageContent>
+          <InArgument x:TypeArguments="bu:GetRepresentitiveRequest">[New BookingWorkFlowService.UserServiceReference.GetRepresentitiveRequest() With { .user = user }]</InArgument>
+        </p1:SendMessageContent>
+        <p1:Send.EndpointConfigurationName>
+          <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+        </p1:Send.EndpointConfigurationName>
+      </p1:Send>
+      <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IUserSvc/GetRepresentitiveResponse">
+        <p1:ReceiveMessageContent>
+          <OutArgument x:TypeArguments="bu:GetRepresentitiveResponse">
+            <VariableReference x:TypeArguments="bu:GetRepresentitiveResponse">
+              <VariableReference.Variable>
+                <Variable x:TypeArguments="bu:GetRepresentitiveResponse" x:Name="__ReferenceID1" Name="tempResult_f3651e66b2f94424a745c12b4b2500d4" />
+              </VariableReference.Variable>
+            </VariableReference>
+          </OutArgument>
+        </p1:ReceiveMessageContent>
+      </p1:ReceiveReply>
+      <Assign>
+        <Assign.To>
+          <OutArgument x:TypeArguments="bu:User">[GetRepresentitiveResult]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="bu:User">[tempResult_f3651e66b2f94424a745c12b4b2500d4.GetRepresentitiveResult]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <sads:DebugSymbol.Symbol>9xAd4Kd/XYQtJ2hXwedL2ZJnvwFEOlxQcm9qZWN0c1xPdGhlclxDTzc1MTVBc3NpZ25tZW50MlxNZWV0aW5nU2NoZWR1bGVyXEJvb2tpbmdXb3JrRmxvd1NlcnZpY2VcU2VydmljZSBSZWZlcmVuY2VzXFVzZXJTZXJ2aWNlUmVmZXJlbmNlXEJvb2tpbmdXb3JrRmxvd1NlcnZpY2UuVXNlclNlcnZpY2VSZWZlcmVuY2UuSVVzZXJTdmMuR2V0UmVwcmVzZW50aXRpdmUueGFtbAkhA08OAgEBJgU6DwIBCjsFRRcCAQdGBU0OAgECNUM1pQECAQwrDy8fAgELPgtCHwIBCUsvS3QCAQVIMEhJAgED</sads:DebugSymbol.Symbol>
+    </Sequence>
+  </this:GetRepresentitive.Implementation>
+</this:GetRepresentitive>

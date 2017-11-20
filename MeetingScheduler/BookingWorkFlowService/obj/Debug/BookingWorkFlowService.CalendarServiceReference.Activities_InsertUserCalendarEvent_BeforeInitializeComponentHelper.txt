@@ -1,0 +1,2 @@
+BookingWorkFlowService.CalendarServiceReference.ICalendarSvc.InsertUserCalendarEvent.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

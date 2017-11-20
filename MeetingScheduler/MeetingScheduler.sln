@@ -10,6 +10,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarService", "CalendarService\CalendarService.csproj", "{4EE35D75-7D86-40D1-8591-6A1A7429B580}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingWorkFlowService", "BookingWorkFlowService\BookingWorkFlowService.csproj", "{14F2507F-F756-47A3-9290-C488AA3459F8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{62D88215-11F0-47FE-85D9-0A0F2BE34F0F} = {62D88215-11F0-47FE-85D9-0A0F2BE34F0F}
+		{4EE35D75-7D86-40D1-8591-6A1A7429B580} = {4EE35D75-7D86-40D1-8591-6A1A7429B580}
+		{54BCEEA7-DF80-4822-92EC-6B282A0491D3} = {54BCEEA7-DF80-4822-92EC-6B282A0491D3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingScheduler.Core", "MeetingScheduler.Core\MeetingScheduler.Core.csproj", "{59EB86C3-1386-43CC-9AF7-0ED7B742572A}"
 EndProject

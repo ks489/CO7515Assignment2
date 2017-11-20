@@ -66,7 +66,7 @@
         <OutArgument x:TypeArguments="bc:InsertUserCalendarEventResponse">
           <VariableReference x:TypeArguments="bc:InsertUserCalendarEventResponse">
             <VariableReference.Variable>
-              <Variable x:TypeArguments="bc:InsertUserCalendarEventResponse" x:Name="__ReferenceID1" Name="tempResult_d8079c4fcd834c5fa0e4fa6da6e95f12" />
+              <Variable x:TypeArguments="bc:InsertUserCalendarEventResponse" x:Name="__ReferenceID1" Name="tempResult_0db4e26b916e4d34be95ddad302f6044" />
             </VariableReference.Variable>
           </VariableReference>
         </OutArgument>

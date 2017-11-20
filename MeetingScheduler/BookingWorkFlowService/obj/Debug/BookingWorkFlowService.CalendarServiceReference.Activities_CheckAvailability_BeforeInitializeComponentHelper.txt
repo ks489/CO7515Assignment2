@@ -1,0 +1,2 @@
+BookingWorkFlowService.CalendarServiceReference.ICalendarSvc.CheckAvailability.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

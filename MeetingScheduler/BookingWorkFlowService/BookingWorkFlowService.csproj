@@ -59,6 +59,45 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Service References\CalendarServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CommunicationServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <None Include="Service References\CalendarServiceReference\CalendarSvc.disco" />
+    <None Include="Service References\CalendarServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CalendarServiceReference\configuration.svcinfo" />
+    <None Include="Service References\CalendarServiceReference\Reference.svcmap">
+      <Generator>Xaml Activity Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CalendarServiceReference\endpointConfigurationNameResolver.svcinfo" />
+    <None Include="Service References\CommunicationServiceReference\CommunicationSvc.disco" />
+    <None Include="Service References\CommunicationServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CommunicationServiceReference\configuration.svcinfo" />
+    <None Include="Service References\CommunicationServiceReference\Reference.svcmap">
+      <Generator>Xaml Activity Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CommunicationServiceReference\endpointConfigurationNameResolver.svcinfo" />
+    <None Include="Service References\UserServiceReference\UserSvc.disco" />
+    <None Include="Service References\UserServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\UserServiceReference\configuration.svcinfo" />
+    <None Include="Service References\UserServiceReference\Reference.svcmap">
+      <Generator>Xaml Activity Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserServiceReference\endpointConfigurationNameResolver.svcinfo" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -67,6 +106,30 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Service References\CalendarServiceReference\CalendarSvc.wsdl" />
+    <None Include="Service References\CalendarServiceReference\CalendarSvc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommunicationServiceReference\CommunicationSvc.wsdl" />
+    <None Include="Service References\CommunicationServiceReference\CommunicationSvc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommunicationServiceReference\CommunicationSvc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommunicationServiceReference\CommunicationSvc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceReference\UserSvc.wsdl" />
+    <None Include="Service References\UserServiceReference\UserSvc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceReference\UserSvc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceReference\UserSvc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -76,6 +139,55 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BookingWFService.xamlx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CalendarServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CommunicationServiceReference\" />
+    <WCFMetadataStorage Include="Service References\UserServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CalendarServiceReference\CalendarSvc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalendarServiceReference\CalendarSvc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="Service References\UserServiceReference\BookingWorkFlowService.UserServiceReference.IUserSvc.GetRepresentitive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="Service References\CommunicationServiceReference\BookingWorkFlowService.CommunicationServiceReference.ICommunicationSvc.SendMessage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="Service References\CalendarServiceReference\BookingWorkFlowService.CalendarServiceReference.ICalendarSvc.CheckAvailability.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="Service References\CalendarServiceReference\BookingWorkFlowService.CalendarServiceReference.ICalendarSvc.InsertUserCalendarEvent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

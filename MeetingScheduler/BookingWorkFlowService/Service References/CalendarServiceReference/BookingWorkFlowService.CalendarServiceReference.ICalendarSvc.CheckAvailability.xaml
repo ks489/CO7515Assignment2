@@ -67,7 +67,7 @@
         <OutArgument x:TypeArguments="bc:CheckAvailabilityResponse">
           <VariableReference x:TypeArguments="bc:CheckAvailabilityResponse">
             <VariableReference.Variable>
-              <Variable x:TypeArguments="bc:CheckAvailabilityResponse" x:Name="__ReferenceID1" Name="tempResult_2964dd21d9664f1ba68d499d276a8f9c" />
+              <Variable x:TypeArguments="bc:CheckAvailabilityResponse" x:Name="__ReferenceID1" Name="tempResult_6bc1fd6ae1dc492bbc93369f6ae757bb" />
             </VariableReference.Variable>
           </VariableReference>
         </OutArgument>
@@ -78,7 +78,7 @@
         <OutArgument x:TypeArguments="x:Boolean">[CheckAvailabilityResult]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:Boolean">[tempResult_2964dd21d9664f1ba68d499d276a8f9c.CheckAvailabilityResult]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean">[tempResult_6bc1fd6ae1dc492bbc93369f6ae757bb.CheckAvailabilityResult]</InArgument>
       </Assign.Value>
     </Assign>
     <sads:DebugSymbol.Symbol>d8sBRDpcUHJvamVjdHNcT3RoZXJcQ083NTE1QXNzaWdubWVudDJcTWVldGluZ1NjaGVkdWxlclxCb29raW5nV29ya0Zsb3dTZXJ2aWNlXFNlcnZpY2UgUmVmZXJlbmNlc1xDYWxlbmRhclNlcnZpY2VSZWZlcmVuY2VcQm9va2luZ1dvcmtGbG93U2VydmljZS5DYWxlbmRhclNlcnZpY2VSZWZlcmVuY2UuSUNhbGVuZGFyU3ZjLkNoZWNrQXZhaWxhYmlsaXR5LnhhbWwJJwNVDgIBASwFQA8CAQpBBUsXAgEHTAVTDgIBAjtDO78BAgEMMQ81HwIBC0QLSB8CAQlRMVF2AgEFTjJOSwIBAw==</sads:DebugSymbol.Symbol>

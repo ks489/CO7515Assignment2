@@ -1,0 +1,2 @@
+BookingWorkFlowService.CommunicationServiceReference.ICommunicationSvc.SendMessage.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper
