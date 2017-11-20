@@ -23,6 +23,49 @@ meeting (2 alternative time slots).
 
 get user busy from calendar (date and time, user)
 
-get employee representative
+get employee representative (returns best communication)
 
-communication service
+communication service (send communication)
+
+insert into user's calendar 
+
+
+=================================================
+
+
+1) Analyse the scenario and decide on which 4 services are needed by the process described
+above. Decide what interfaces are needed (each service needs one interface).
+a. Draw a process diagram for your solution that shows the flow of the process as well
+as the interactions with the partners. [6 marks]
+b. List the interfaces of the process and service. [4 marks]
+Note: this can be done on paper and scanned/ photographed or in PowerPoint. Please try to
+save the design as pdf file were possible.
+
+2) Implement the four needed partner services either as C# or Workflow services; they can all
+return hardcoded or random values. (Specifically there is no need to connect to a database
+here and there is no need for complex logic for this part). Keep it simple, but have four
+services (or one with four interfaces) as you will need this for the next step.
+[6 marks]
+
+3) Implement the designed Meeting Scheduler Process using Windows Workflow Foundation
+Workflow services. [10 marks]
+
+4) Describe how you would deploy services to the Azure Cloud. You do not need to actually
+deploy the project, but you will have to explain what steps you need to undertake to enable
+the VS solution to become cloud enabled and how you would create an instance in the
+cloud that allows deployment. (This does not need to include details on how to create a
+cloud account; the focus is on deploying an application.)
+[4 marks]
+
+Please note: Some parts of the specification above might be imprecise – welcome to the real world!
+Please make your own assumptions and fill in the gaps – just describe your assumptions in your
+submissions.
+
+
+
+Tasks
+
+CheckAvailability - calendar
+GetRepresentitive - user
+SendMessage - communication
+InsertUserCalendarEvent - calendar
