@@ -1,0 +1,28 @@
+“Companies often require for meetings to be scheduled. This seems like a simple problem, but
+drives many secretaries mad. Today’s workers store much of the essential data in online and open
+diaries which can be used to provide mechanised support for scheduling meetings. 
+
+In particular, users are using an online calendar which given a date and time would return the busy status of the
+user. 
+
+The business in question also maintains a database about its employees, showing for a given
+employee who can represent her if unavailable. 
+
+The database also contains the best way to contact an
+employee – either email or SMS. 
+
+The business has respective communication services that allow for
+a message to be sent to an SMS or email respectively. Also, the meeting will be inserted into the
+user’s calendar automatically.”
+You should concentrate on a slightly simplified scenario, where meetings have exactly three
+participants. If a participant is unavailable, the representative should be chosen and invited
+(independent of their availability). All Users use instances of the same calendar service.
+To trigger the process the secretary provides the names of three employees and a timeframe for the
+meeting (2 alternative time slots).
+
+
+get user busy from calendar (date and time, user)
+
+get employee representative
+
+communication service
