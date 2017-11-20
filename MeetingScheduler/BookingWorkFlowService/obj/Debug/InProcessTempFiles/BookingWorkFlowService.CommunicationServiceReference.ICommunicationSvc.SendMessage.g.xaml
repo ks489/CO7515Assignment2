@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<this:SendMessage this:EndpointConfigurationName="BasicHttpBinding_ICommunicationSvc" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:bc="clr-namespace:BookingWorkFlowService.CommunicationServiceReference;assembly=BookingWorkFlowService" xmlns:bc1="clr-namespace:BookingWorkFlowService.CommunicationServiceReference;assembly=BookingWorkFlowService, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:this="clr-namespace:BookingWorkFlowService.CommunicationServiceReference.Activities;assembly=BookingWorkFlowService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <this:SendMessage.Implementation>
+    <Sequence>
+      <Sequence.Variables>
+        <x:Reference>__ReferenceID1</x:Reference>
+        <x:Reference>__ReferenceID2</x:Reference>
+      </Sequence.Variables>
+      <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/ICommunicationSvc/SendMessage" OperationName="SendMessage" ServiceContractName="p:ICommunicationSvc">
+        <p1:Send.CorrelationInitializers>
+          <p1:RequestReplyCorrelationInitializer>
+            <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+              <InArgument x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                  <VariableValue.Variable>
+                    <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                  </VariableValue.Variable>
+                </VariableValue>
+              </InArgument>
+            </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+          </p1:RequestReplyCorrelationInitializer>
+        </p1:Send.CorrelationInitializers>
+        <p1:SendMessageContent>
+          <InArgument x:TypeArguments="bc:SendMessageRequest">[New BookingWorkFlowService.CommunicationServiceReference.SendMessageRequest() With { .user = user }]</InArgument>
+        </p1:SendMessageContent>
+        <p1:Send.EndpointConfigurationName>
+          <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+        </p1:Send.EndpointConfigurationName>
+      </p1:Send>
+      <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/ICommunicationSvc/SendMessageResponse">
+        <p1:ReceiveMessageContent>
+          <OutArgument x:TypeArguments="bc:SendMessageResponse">
+            <VariableReference x:TypeArguments="bc:SendMessageResponse">
+              <VariableReference.Variable>
+                <Variable x:TypeArguments="bc:SendMessageResponse" x:Name="__ReferenceID1" Name="tempResult_9f25496219504e3b83c4b511109765de" />
+              </VariableReference.Variable>
+            </VariableReference>
+          </OutArgument>
+        </p1:ReceiveMessageContent>
+      </p1:ReceiveReply>
+      <sads:DebugSymbol.Symbol>d9QBRDpcUHJvamVjdHNcT3RoZXJcQ083NTE1QXNzaWdubWVudDJcTWVldGluZ1NjaGVkdWxlclxCb29raW5nV29ya0Zsb3dTZXJ2aWNlXFNlcnZpY2UgUmVmZXJlbmNlc1xDb21tdW5pY2F0aW9uU2VydmljZVJlZmVyZW5jZVxCb29raW5nV29ya0Zsb3dTZXJ2aWNlLkNvbW11bmljYXRpb25TZXJ2aWNlUmVmZXJlbmNlLklDb21tdW5pY2F0aW9uU3ZjLlNlbmRNZXNzYWdlLnhhbWwGIANGDgIBASUFOQ8CAQU6BUQXAgECND00ogECAQcqDy4fAgEGPQtBHwIBBA==</sads:DebugSymbol.Symbol>
+    </Sequence>
+  </this:SendMessage.Implementation>
+</this:SendMessage>

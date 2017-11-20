@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c2d792dd-3fd0-43d4-8b36-4c98b6e450d0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:39301/CalendarSvc.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CalendarSvc.xsd" MetadataType="Schema" ID="ad43a48c-692f-4c35-918f-d67693654ccd" SourceId="1" SourceUrl="http://localhost:39301/CalendarSvc.svc?xsd=xsd1" />
+    <MetadataFile FileName="CalendarSvc1.xsd" MetadataType="Schema" ID="744a28e9-142b-427a-89a6-5ecc5181d2cd" SourceId="1" SourceUrl="http://localhost:39301/CalendarSvc.svc?xsd=xsd2" />
+    <MetadataFile FileName="CalendarSvc.disco" MetadataType="Disco" ID="ac30783a-da1d-431f-86bd-9d516a64fbad" SourceId="1" SourceUrl="http://localhost:39301/CalendarSvc.svc?disco" />
+    <MetadataFile FileName="CalendarSvc2.xsd" MetadataType="Schema" ID="fd095542-b8ca-410f-82b4-5c1020cbe54a" SourceId="1" SourceUrl="http://localhost:39301/CalendarSvc.svc?xsd=xsd0" />
+    <MetadataFile FileName="CalendarSvc.wsdl" MetadataType="Wsdl" ID="58550ccc-0e4a-4d4c-90f3-36cc450ebbc2" SourceId="1" SourceUrl="http://localhost:39301/CalendarSvc.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

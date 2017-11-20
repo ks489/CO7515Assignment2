@@ -1,0 +1,80 @@
+<Activity mc:Ignorable="sap2010 sads" x:Class="BookingWorkFlowService.UserServiceReference.Activities.GetRepresentitive" this:GetRepresentitive.EndpointConfigurationName="BasicHttpBinding_IUserSvc"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:bu="clr-namespace:BookingWorkFlowService.UserServiceReference;assembly=BookingWorkFlowService"
+ xmlns:bu1="clr-namespace:BookingWorkFlowService.UserServiceReference;assembly=BookingWorkFlowService, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sc="clr-namespace:System.ComponentModel;assembly=System"
+ xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+ xmlns:this="clr-namespace:BookingWorkFlowService.UserServiceReference.Activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="EndpointConfigurationName" Type="x:String">
+      <x:Property.Attributes>
+        <sc:DefaultValueAttribute>
+          <x:Arguments>
+            <x:String>BasicHttpBinding_IUserSvc</x:String>
+          </x:Arguments>
+        </sc:DefaultValueAttribute>
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="user" Type="InArgument(bu:User)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="GetRepresentitiveResult" Type="OutArgument(bu:User)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence>
+    <Sequence.Variables>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+    </Sequence.Variables>
+    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IUserSvc/GetRepresentitive" OperationName="GetRepresentitive" ServiceContractName="p:IUserSvc">
+      <p1:Send.CorrelationInitializers>
+        <p1:RequestReplyCorrelationInitializer>
+          <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+            <InArgument x:TypeArguments="p1:CorrelationHandle">
+              <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue.Variable>
+                  <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                </VariableValue.Variable>
+              </VariableValue>
+            </InArgument>
+          </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+        </p1:RequestReplyCorrelationInitializer>
+      </p1:Send.CorrelationInitializers>
+      <p1:SendMessageContent>
+        <InArgument x:TypeArguments="bu:GetRepresentitiveRequest">[New BookingWorkFlowService.UserServiceReference.GetRepresentitiveRequest() With { .user = user }]</InArgument>
+      </p1:SendMessageContent>
+      <p1:Send.EndpointConfigurationName>
+        <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+      </p1:Send.EndpointConfigurationName>
+    </p1:Send>
+    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IUserSvc/GetRepresentitiveResponse">
+      <p1:ReceiveMessageContent>
+        <OutArgument x:TypeArguments="bu:GetRepresentitiveResponse">
+          <VariableReference x:TypeArguments="bu:GetRepresentitiveResponse">
+            <VariableReference.Variable>
+              <Variable x:TypeArguments="bu:GetRepresentitiveResponse" x:Name="__ReferenceID1" Name="tempResult_aa7772ecf1044e7b82d78334eabc624e" />
+            </VariableReference.Variable>
+          </VariableReference>
+        </OutArgument>
+      </p1:ReceiveMessageContent>
+    </p1:ReceiveReply>
+    <Assign>
+      <Assign.To>
+        <OutArgument x:TypeArguments="bu:User">[GetRepresentitiveResult]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="bu:User">[tempResult_aa7772ecf1044e7b82d78334eabc624e.GetRepresentitiveResult]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <sads:DebugSymbol.Symbol>d78BRDpcUHJvamVjdHNcT3RoZXJcQ083NTE1QXNzaWdubWVudDJcTWVldGluZ1NjaGVkdWxlclxCb29raW5nV29ya0Zsb3dTZXJ2aWNlXFNlcnZpY2UgUmVmZXJlbmNlc1xVc2VyU2VydmljZVJlZmVyZW5jZVxCb29raW5nV29ya0Zsb3dTZXJ2aWNlLlVzZXJTZXJ2aWNlUmVmZXJlbmNlLklVc2VyU3ZjLkdldFJlcHJlc2VudGl0aXZlLnhhbWwJIQNPDgIBASYFOg8CAQo7BUUXAgEHRgVNDgIBAjVDNaUBAgEMKw8vHwIBCz4LQh8CAQlLL0t0AgEFSDBISQIBAw==</sads:DebugSymbol.Symbol>
+  </Sequence>
+</Activity>
