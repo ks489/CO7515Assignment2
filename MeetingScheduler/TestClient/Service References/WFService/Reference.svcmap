@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1f6f2ad4-d442-4f23-b20b-ec45cf25c84c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:39312/BookingWFService.xamlx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BookingWFService.xsd" MetadataType="Schema" ID="51760f12-7ff1-41da-8f10-db8bd349b96c" SourceId="1" SourceUrl="http://localhost:39312/BookingWFService.xamlx?xsd=xsd2" />
+    <MetadataFile FileName="BookingWFService1.xsd" MetadataType="Schema" ID="06ad5dda-0ad9-4f9a-8691-cce0939355cf" SourceId="1" SourceUrl="http://localhost:39312/BookingWFService.xamlx?xsd=xsd0" />
+    <MetadataFile FileName="BookingWFService.wsdl" MetadataType="Wsdl" ID="af728007-d88f-45ca-acf9-722620a23975" SourceId="1" SourceUrl="http://localhost:39312/BookingWFService.xamlx?wsdl" />
+    <MetadataFile FileName="BookingWFService.disco" MetadataType="Disco" ID="dd076762-92c4-4039-80dc-6d215814f738" SourceId="1" SourceUrl="http://localhost:39312/BookingWFService.xamlx?disco" />
+    <MetadataFile FileName="BookingWFService2.xsd" MetadataType="Schema" ID="6bd1e6c4-224c-4c3c-a610-d996efe143f9" SourceId="1" SourceUrl="http://localhost:39312/BookingWFService.xamlx?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

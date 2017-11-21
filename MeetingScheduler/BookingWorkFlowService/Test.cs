@@ -5,11 +5,17 @@ using System.Web;
 
 namespace BookingWorkFlowService
 {
-    public static class Test
+    public class Test
     {
-        public static string Greet()
+        public string Greet()
         {
             return "lol";
         }
+
+        public string AddNumbers(int a, int v)
+        {
+            return "helloooo";
+        }
+
     }
 }

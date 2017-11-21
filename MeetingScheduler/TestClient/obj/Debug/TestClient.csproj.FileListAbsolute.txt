@@ -1,0 +1,6 @@
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\TestClient\bin\Debug\TestClient.exe.config
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\TestClient\bin\Debug\TestClient.exe
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\TestClient\bin\Debug\TestClient.pdb
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\TestClient\obj\Debug\TestClient.csprojResolveAssemblyReference.cache
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\TestClient\obj\Debug\TestClient.exe
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\TestClient\obj\Debug\TestClient.pdb

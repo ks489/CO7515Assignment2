@@ -35,4 +35,5 @@ D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\InProcessTempFiles\BookingWorkFlowService.UserServiceReference.IUserSvc.GetRepresentitive.g.cs
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\InProcessTempFiles\BookingWorkFlowService.UserServiceReference.IUserSvc.GetRepresentitive.g.xaml
 D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\InProcessTempFiles\_BookingWorkFlowService.g.cs
-D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\obj\Debug\BookingWorkFlowService.csproj.FileListAbsolute.txt
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\bin\AutoMapper.dll
+D:\Projects\Other\CO7515Assignment2\MeetingScheduler\BookingWorkFlowService\bin\AutoMapper.xml

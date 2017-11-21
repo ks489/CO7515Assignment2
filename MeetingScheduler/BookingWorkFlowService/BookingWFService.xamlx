@@ -1,18 +1,22 @@
-﻿<WorkflowService mc:Ignorable="sap sap2010 sads" p1:TextExpression.Namespaces="{x:Reference __ReferenceID1}" p1:TextExpression.References="{x:Reference __ReferenceID2}" ConfigurationName="BookingWFService" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="BookingWFService"
+﻿<WorkflowService mc:Ignorable="sads sap sap2010" p1:TextExpression.Namespaces="{x:Reference __ReferenceID1}" p1:TextExpression.References="{x:Reference __ReferenceID2}" ConfigurationName="BookingWFService" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="BookingWFService"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
  xmlns:b="clr-namespace:BookingWorkFlowService;assembly=BookingWorkFlowService"
  xmlns:bc="clr-namespace:BookingWorkFlowService.CalendarServiceReference;assembly=BookingWorkFlowService"
+ xmlns:bca="clr-namespace:BookingWorkFlowService.CalendarServiceReference.Activities;assembly=BookingWorkFlowService"
  xmlns:bu="clr-namespace:BookingWorkFlowService.UserServiceReference;assembly=BookingWorkFlowService"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
  xmlns:p="http://tempuri.org/"
  xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:s="clr-namespace:System;assembly=mscorlib"
  xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
  xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
  xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sc="clr-namespace:System.ComponentModel;assembly=System"
  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <p1:Sequence DisplayName="Sequential Service" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <p1:TextExpression.Namespaces>
@@ -49,6 +53,7 @@
         <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
         <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
         <p1:AssemblyReference>MeetingScheduler.Core</p1:AssemblyReference>
+        <p1:AssemblyReference>AutoMapper</p1:AssemblyReference>
         <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
         <p1:AssemblyReference>BookingWorkFlowService</p1:AssemblyReference>
       </sco:Collection>
@@ -60,8 +65,13 @@
       <p1:Variable x:TypeArguments="s:DateTime" Name="GlobalMeetingDate" />
       <p1:Variable x:TypeArguments="x:Boolean" Name="GlobalAvailable" />
       <p1:Variable x:TypeArguments="bc:User" Name="GlobalUser" />
+      <p1:Variable x:TypeArguments="bc:User" Name="GlobalCalendarUser" />
+      <p1:Variable x:TypeArguments="b:ObjectMapper" Name="UserToCalendarMap">
+        <p1:Variable.Default>
+          <mca:CSharpValue x:TypeArguments="b:ObjectMapper">new BookingWorkFlowService.ObjectMapper()</mca:CSharpValue>
+        </p1:Variable.Default>
+      </p1:Variable>
       <p1:Variable x:TypeArguments="x:String" Name="variable1" />
-      <p1:Variable x:TypeArguments="b:Test" Name="testinvoke" />
     </p1:Sequence.Variables>
     <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="ScheduleMeeting" ServiceContractName="p:IService">
       <Receive.CorrelationInitializers>
@@ -96,44 +106,72 @@
           <p1:Sequence.Variables>
             <p1:Variable x:TypeArguments="x:String" Name="teststring" />
           </p1:Sequence.Variables>
-          <p1:InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="  Greet" TargetType="b:Test">
+          <p1:InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="MapFromUserToCalendar">
             <p1:InvokeMethod.Result>
-              <p1:OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String">teststring</mca:CSharpReference>
+              <p1:OutArgument x:TypeArguments="bc:User">
+                <mca:CSharpReference x:TypeArguments="bc:User">GlobalCalendarUser</mca:CSharpReference>
               </p1:OutArgument>
             </p1:InvokeMethod.Result>
+            <p1:InvokeMethod.TargetObject>
+              <p1:InArgument x:TypeArguments="b:ObjectMapper">
+                <mca:CSharpValue x:TypeArguments="b:ObjectMapper">UserToCalendarMap</mca:CSharpValue>
+              </p1:InArgument>
+            </p1:InvokeMethod.TargetObject>
+            <p1:InArgument x:TypeArguments="bu:User">
+              <mca:CSharpValue x:TypeArguments="bu:User">null</mca:CSharpValue>
+            </p1:InArgument>
           </p1:InvokeMethod>
+          <bca:CheckAvailability sap2010:WorkflowViewState.IdRef="CheckAvailability_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+            <bca:CheckAvailability.CheckAvailabilityResult>
+              <p1:OutArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpReference x:TypeArguments="x:Boolean">GlobalAvailable</mca:CSharpReference>
+              </p1:OutArgument>
+            </bca:CheckAvailability.CheckAvailabilityResult>
+            <bca:CheckAvailability.dateTime>
+              <p1:InArgument x:TypeArguments="s:DateTime">
+                <mca:CSharpValue x:TypeArguments="s:DateTime">GlobalMeetingDate</mca:CSharpValue>
+              </p1:InArgument>
+            </bca:CheckAvailability.dateTime>
+            <bca:CheckAvailability.user>
+              <p1:InArgument x:TypeArguments="bc:User">
+                <mca:CSharpValue x:TypeArguments="bc:User">GlobalCalendarUser</mca:CSharpValue>
+              </p1:InArgument>
+            </bca:CheckAvailability.user>
+          </bca:CheckAvailability>
         </p1:Sequence>
       </p1:ActivityAction>
     </p1:ForEach>
     <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
       <SendParametersContent>
-        <p1:InArgument x:TypeArguments="x:String" x:Key="parameter1">Hello</p1:InArgument>
+        <p1:InArgument x:TypeArguments="x:String" x:Key="parameter1">
+          <mca:CSharpValue x:TypeArguments="x:String">GlobalAvailable.ToString()</mca:CSharpValue>
+        </p1:InArgument>
       </SendParametersContent>
     </SendReply>
-    <sads:DebugSymbol.Symbol>d2JEOlxQcm9qZWN0c1xPdGhlclxDTzc1MTVBc3NpZ25tZW50MlxNZWV0aW5nU2NoZWR1bGVyXEJvb2tpbmdXb3JrRmxvd1NlcnZpY2VcQm9va2luZ1dGU2VydmljZS54YW1seAwRA3MRAQFCBVQPAS1VBWwSARZtBXERAQJOC05lAUBRC1FkATdHD0dcAS5YC1hsASRfCWoXARdvRm9LARVjC2kdARhmEWZhARk=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d2JEOlxQcm9qZWN0c1xPdGhlclxDTzc1MTVBc3NpZ25tZW50MlxNZWV0aW5nU2NoZWR1bGVyXEJvb2tpbmdXb3JrRmxvd1NlcnZpY2VcQm9va2luZ1dGU2VydmljZS54YW1seBMVA5gBEQEBRwtHeAECTAVeDwKBAV8FjwESASuQAQWWAREBDFgLWGUClgFbC1tkAowBUQ9RXAKCAWILYmwBd2kJjQEXASyTAQuTAWMBIW0Lex0BUnwLjAEjAS15D3lQAWtwEXBoAV91EXVmAVN/EX9nAUaEARGEAWIBOokBEYkBYAEu</sads:DebugSymbol.Symbol>
   </p1:Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="287,90" />
       <sap2010:ViewStateData Id="InvokeMethod_1" sap:VirtualizedContainerService.HintSize="218,134" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="240,258">
+      <sap2010:ViewStateData Id="CheckAvailability_1" sap:VirtualizedContainerService.HintSize="218,22" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="240,320">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="287,408" />
+      <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="287,470" />
       <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="287,90" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="309,792">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="309,854">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="339,862" />
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="339,924" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </WorkflowService>

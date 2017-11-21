@@ -80,6 +80,7 @@ namespace XamlStaticHelperNamespace {
             assemblyList.Add(Load("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"));
             assemblyList.Add(Load("System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e08" +
                         "9"));
+            assemblyList.Add(Load("AutoMapper, Version=6.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005"));
             assemblyList.Add(Load("MeetingScheduler.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"));
             assemblyList.Add(System.Reflection.Assembly.GetExecutingAssembly());
             return assemblyList;
