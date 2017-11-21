@@ -33,6 +33,7 @@ namespace CalendarService
         /// <returns></returns>
         public void InsertUserCalendarEvent(User user, DateTime dateTime)
         {
+            string a = "";
             //1. Gets the users calendar
             //2. Inserts the date and time event into the user's calendar
         }
