@@ -1,0 +1,26 @@
+How to deploy application to Azure cloud.
+
+1.Create Azure account online with username/email address and password.
+2.Add Visual Studio user (The one linked to Azure) to Visual Studio.
+3.Create application. 
+4.In the solution explorer, right click the solution project.
+5.Press the “Add Windows Azure Cloud Service Project”
+6.A new Azure project is added to your solution with all Azure files.
+7.Deploy the service
+8.Right click the new Azure project
+9.Select Publish
+10.A new dialog box will appear
+11.Click the link in the dialog box to sign into Azure
+12.A new browser window will appear so you can login using your Azure account
+13.A new publish settings file will download(xml file)
+14.Save this file onto your desktop
+15.Go back into Visual Studio 
+16.Click the import button and import the publish settings file (xml file downloaded earlier)
+17.Choose subscription type you want to apply the web service to.
+18.Click the next button
+  a.Click the Hosted service drop down (optional) Or you can use the existing name (skip the other steps below)
+  b.Click new (optional)
+  c.Name the service (Optional)
+  d.Select the region (Optional)
+19.Click next
+20.Click publish
